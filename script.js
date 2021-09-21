@@ -59,14 +59,6 @@ function scan() {
         setTimeout(scan, 300);
     }
 }
-
-if (document.querySelector("body").classList.contains !== "modal-open") {
-    console.log(document.querySelector("body").classList);
-    video.srcObject.getTracks().forEach((track) => {
-        track.stop();
-    });
-}
-
 $("#scanner-modal").on("hidden.bs.modal", function (e) {
     video.srcObject.getTracks().forEach((track) => {
         track.stop();
