@@ -59,3 +59,9 @@ function scan() {
         setTimeout(scan, 300);
     }
 }
+
+if (document.querySelector("body").classList.contains !== "modal-open") {
+    video.srcObject.getTracks().forEach((track) => {
+        track.stop();
+    });
+}
