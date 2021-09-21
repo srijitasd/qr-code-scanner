@@ -55,5 +55,8 @@ function scan() {
     } catch (e) {
         //setTimeout(scan, 300);
         alert("error");
+        video.srcObject.getTracks().forEach((track) => {
+            track.stop();
+        });
     }
 }
