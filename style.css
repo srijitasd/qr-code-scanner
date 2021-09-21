@@ -51,5 +51,7 @@ h1 {
 }
 
 #scanner-modal {
-    padding: 1rem !important;
+    padding: 0;
+    width: fit-content;
+    border: 2px solid yellow;
 }

@@ -53,6 +53,7 @@ function scan() {
     try {
         qrcode.decode();
     } catch (e) {
-        setTimeout(scan, 300);
+        //setTimeout(scan, 300);
+        alert("error");
     }
 }
