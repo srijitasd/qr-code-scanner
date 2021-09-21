@@ -49,3 +49,7 @@ h1 {
     max-width: 700px;
     background-color: white;
 }
+
+#scanner-modal {
+    padding: 1rem;
+}
