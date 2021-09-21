@@ -53,10 +53,6 @@ function scan() {
     try {
         qrcode.decode();
     } catch (e) {
-        //setTimeout(scan, 300);
-        alert("error");
-        video.srcObject.getTracks().forEach((track) => {
-            track.stop();
-        });
+        setTimeout(scan, 300);
     }
 }

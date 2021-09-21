@@ -29,6 +29,7 @@ h1 {
     min-height: 300px;
     max-width: 400px;
     min-width: 300px;
+    border: 2px solid yellow;
 }
 
 #btn-scan-qr {
@@ -53,5 +54,4 @@ h1 {
 #scanner-modal {
     padding: 0;
     width: fit-content;
-    border: 2px solid yellow;
 }
