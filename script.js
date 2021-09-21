@@ -57,6 +57,9 @@ function scan() {
 
 $("#scanner-modal").on("hidden.bs.modal", function (e) {
     shutCamera(video);
+    qrResult.hidden = false;
+    btnScanQR.hidden = false;
+    canvasElement.hidden = true;
 });
 
 //* SHUT DOWN CAMERA
