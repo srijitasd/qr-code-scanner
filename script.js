@@ -38,7 +38,7 @@ btnScanQR.onclick = () => {
             scan();
         });
 
-    $("#exampleModal").modal("show");
+    $("#scanner-modal").modal("show");
 };
 
 function tick() {
