@@ -16,6 +16,7 @@ qrcode.callback = (res) => {
         video.srcObject.getTracks().forEach((track) => {
             track.stop();
         });
+        $("#scanner-modal").modal("hide");
 
         qrResult.hidden = false;
         btnScanQR.hidden = false;
