@@ -1,5 +1,3 @@
-$("#scanner-modal").modal("show");
-
 const video = document.createElement("video");
 const canvasElement = document.getElementById("qr-canvas");
 const canvas = canvasElement.getContext("2d");
@@ -14,10 +12,7 @@ qrcode.callback = (res) => {
     if (res) {
         outputData.innerText = res;
         scanning = false;
-
-        video.srcObject.getTracks().forEach((track) => {
-            track.stop();
-        });
+        shutCamera(video);
         $("#scanner-modal").modal("hide");
 
         qrResult.hidden = false;
@@ -59,8 +54,14 @@ function scan() {
         setTimeout(scan, 300);
     }
 }
+
 $("#scanner-modal").on("hidden.bs.modal", function (e) {
+    shutCamera(video);
+});
+
+//* SHUT DOWN CAMERA
+const shutCamera = (video) => {
     video.srcObject.getTracks().forEach((track) => {
         track.stop();
     });
-});
+};
