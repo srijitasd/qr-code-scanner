@@ -1,3 +1,5 @@
+$("#scanner-modal").modal("show");
+
 const video = document.createElement("video");
 const canvasElement = document.getElementById("qr-canvas");
 const canvas = canvasElement.getContext("2d");
